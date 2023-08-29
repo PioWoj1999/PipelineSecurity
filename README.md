@@ -10,20 +10,21 @@ CD - Continues Deployment (automated deployment to PROD)
 | Build, Integrate, Test → | Test, Deploy       | Releasae (Prod)      |
 
 ## CI/CD pipeline security
-What do we understand over this term? 
+
+What do we understand over this term?
+
 * Building visibility over the engineering ecosystem
 * Mapping risks and attakc paths
 * Securing the engineering ecosystem - all the way from code to deployment
 
 2021 - the year of CI/CD Security<br/>
-Engineering environments have become the new attacker's turf. A single insecure step in the CI, or insecure package import - can expose the organization to critical risks. 
+Engineering environments have become the new attacker's turf. A single insecure step in the CI, or insecure package import - can expose the organization to critical risks.
 Lack of security knowledge and which attack to protect against. <br/>
-Top 10 CI/CD Security Risks report url: https://www.cidersecurity.io/wp-content/uploads/2022/06/Top-10-CICD-Security-Risks-.pdf <br/>
+Top 10 CI/CD Security Risks report url: <https://www.cidersecurity.io/wp-content/uploads/2022/06/Top-10-CICD-Security-Risks-.pdf> <br/>
 
 1. **Insufficient Flow Control Mechanisms**<br/>
 The ability of an attacker that has obtained permissions to a system within the CI/CD process (SCM, CI, Artifact repository, etc.) to single handedly push malicious code or artifacts down the pipeline, due to a lack in mechanisms that enforce additional approval or review.<br/>
 Ex.: PHP Git infrastructure compromise
-
 
 2. **Inadequate Identity and Access Management**<br/>
 Stems from the difficulties in managing
@@ -72,14 +73,14 @@ which a 3rd party service can be granted access to resources in CI/CD systems, e
 expanding the attack surface of the organization.<br/>
 Ex.: Environment variables exfiltration
 
-9.  **Improper Artifact Integrity Validation**<br/>
+9. **Improper Artifact Integrity Validation**<br/>
 Allow an attacker with access to one of the
 systems in the CI/CD process to push malicious (although seemingly benign) code or
 artifacts down the pipeline, due to insufficient mechanisms for ensuring the validation of
 code and artifacts.<br/>
 Ex.: PHP Git infrastructure compromise, Environment variables exfiltration
 
-10.  **Insufficient logging and visibility** <br/>
+10. **Insufficient logging and visibility** <br/>
 Allow an adversary to carry out malicious activities
 within the CI/CD environment without being detected during any phase of the attack kill
 chain, including identifying the attacker’s TTPs (Techniques, Tactics and Procedures) as part
@@ -87,12 +88,13 @@ of any post-incident investigation.<br/>
 Ex.: PHP Git infrastructure compromise, Environment variables exfiltration, Dependency Confusion
 
 ----
+
 ### CI/CD Pipeline and CI/CD Security: Defined and Explained
 
 Materials:
 
 * <https://www.strongdm.com/blog/ci-cd-security-and-ci-cd-pipeline>
-* https://www.youtube.com/watch?v=i3Bx1iSzrUY&ab_channel=DevOpsConference
+* <https://www.youtube.com/watch?v=i3Bx1iSzrUY&ab_channel=DevOpsConference>
 
 **Keywords:**
 
@@ -124,19 +126,6 @@ Continuous integration security is important to have in place to reduce the risk
 Most developers use open source code libraries to develop new features more quickly, but this can introduce insecure code if those code snippets aren’t properly managed, i.e.: Log4j vulnerability.
 
 While automated testing in the CI/CD pipeline may expose broken or insecure code before it’s integrated, the pipeline is only designed to test new code additions. Existing code must be monitored and tested regularly to avoid and mitigate these types of breaches.
-
-#### Top 10 CI/CD Security Risks - OWASP
-
-1. **Not Enough Security Controls to Manage Process Flow:** a lack of approval or review processes enables attackers to introduce malicious code
-2. **Weak Identity and Access Management:** poorly managed accounts and access controls give attackers more ways to break into systems
-3. **Fetching and Executing Dangerous Dependencies:** misconfigurations cause systems to pull and execute malicious code packages, allowing attackers to steal credentials
-4. **Poisoned Pipeline Execution (PPE):** attackers inject commands into the build process
-5. **Missing Access Controls within the Pipeline:** poorly scoped access gives attackers free rein within pipeline systems
-6. **Poor Credentialing Practices:** maintaining static credentials, unnecessary access, or unchanged admin credentials gives attackers ongoing access
-7. **System Misconfigurations:** overlooked security settings leaves CI/CD systems exposed to breaches
-8. **Excessive Access Granted to Third Parties:** connecting external resources to the CI/CD pipeline without managing access expands the DevOps attack surface
-9. **Poor Artifact Validation:** without validation controls, attackers can push infected artifacts or code through the pipeline
-10. **Lack of Observability:** inability to detect threats due to poor logging or visibility
 
 #### CI/CD Security Best Practices
 
