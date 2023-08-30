@@ -10,13 +10,6 @@
 # save the file separate from your repository.  If you want secrets backed up
 # with configuration, then see the bottom of this file for an example.
 
-# Ignore all JENKINS_HOME except jobs directory, root xml config, and
-# .gitignore file.
-/*
-!/jobs
-!/.gitignore
-!/*.xml
-
 # Ignore all files in jobs subdirectories except for folders.
 # Note: git doesn't track folders, only file content.
 jobs/**
